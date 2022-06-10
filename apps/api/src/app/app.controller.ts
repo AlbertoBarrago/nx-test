@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import {Controller, Get, Post} from '@nestjs/common';
 
 import { Message } from '@albz-dev/api-interfaces';
 
@@ -9,7 +9,17 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('hello')
-  getData(): Message {
-    return this.appService.getData();
+  getMessage(): Message {
+    return this.appService.getMessage();
+  }
+
+  @Get('todos')
+  getData() {
+    return this.appService.getTodo();
+  }
+
+  @Post('addTodo')
+  addTodo() {
+    return this.appService.addTodo();
   }
 }
