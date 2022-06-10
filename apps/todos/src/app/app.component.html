@@ -1,8 +1,6 @@
 <h1>Todos</h1>
 
-<ul *ngIf="todos">
-  <li *ngFor="let t of todos" class="todo">{{ t.title }}</li>
-</ul>
+<albz-dev-todos [todos]="todos"></albz-dev-todos>
 
 <button id="add-todo" (click)="addTodo()">Add Todo</button>
 <div>Message: {{ hello$ | async | json }}</div>

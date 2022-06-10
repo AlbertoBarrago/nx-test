@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@albz-dev/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@albz-dev/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@albz-dev/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
